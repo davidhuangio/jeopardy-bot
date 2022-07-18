@@ -1,4 +1,5 @@
 FROM node:10-alpine
+ARG SLACK_TOKEN
 
 # Install system dependencies:
 RUN apk add --no-cache \
