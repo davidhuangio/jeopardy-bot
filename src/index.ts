@@ -7,6 +7,7 @@ import { SlackResponse } from './types';
 import CleverPersistence from './CleverPersistence';
 
 const token = process.env.SLACK_TOKEN as string;
+console.log(token)
 
 // The client is initialized and then started to get an active connection to the platform
 const rtm = new RTMClient(token);
