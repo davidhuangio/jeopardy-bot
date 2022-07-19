@@ -13,7 +13,7 @@ function simplifyText(text: string): string {
 
 // Hard code number of seasons:
 // Season 33+ is relatively incomplete.
-const seasons = 32;
+const seasons = 34;
 
 // Selector to get seasons URLs from
 const episodeRegex = /Show #([0-9]+) -/;
