@@ -153,6 +153,8 @@ export default function* guess(action: BaseAction, clue: Clue, wager: number) {
             );
         }
     }
+    
+    //TODO: Here we should check the board state for an empty board and call endGame
 
     // Prompt selection of a new clue:
     yield selectClue({ contestant });
