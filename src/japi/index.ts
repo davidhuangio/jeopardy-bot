@@ -107,8 +107,14 @@ async function loadEpisode(url: string) {
     };
 }
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+}
+
 async function randomEpisode() {
-    const season = Math.ceil(Math.random() * seasons);
+    const season = Math.ceil(Math.random() * getRandomInt(20,35);
     const response = await axios.get(
         `http://www.j-archive.com/showseason.php?season=${season}`,
         { responseType: 'text' },
