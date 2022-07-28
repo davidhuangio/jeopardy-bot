@@ -68,4 +68,4 @@ Persistence works out of the box by periodically uploading a dump of the configu
 
 ### Wake Up
 
-Slack bot currently loses connection and needs to be redployed on railway with new commits.
+Slack bot currently loses connection and needs to be redployed on railway with new commits. 
