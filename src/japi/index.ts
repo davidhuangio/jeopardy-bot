@@ -25,7 +25,7 @@ async function loadEpisode(url: string) {
     const $ = load(response.data);
 
     // Incomplete episode?
-    if ($('#jeopardy_round .clue').length >= $('#jeopardy_round .clue_text').length) {
+    if ($('#jeopardy_round .clue_text').length != 2 * $('#jeopardy_round .clue').length) {
         console.log(
             'Jeopardy round clues: ',
             $('#jeopardy_round .clue').length,
@@ -90,7 +90,6 @@ async function loadEpisode(url: string) {
         // let [, answer] = answerMatches;
 
         let answer = $clue.find('.correct_response').html() as string;
-        console.log("Found answer? -", answer);
         answer = simplifyText(striptags(answer));
 
         // Extract if this question was a daily double:
