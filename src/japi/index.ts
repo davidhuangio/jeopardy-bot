@@ -124,7 +124,7 @@ function getRandomInt(min: number, max: number) {
 }
 
 async function randomEpisode() {
-    const season = Math.ceil(Math.random() * getRandomInt(28,37));
+    const season = getRandomInt(27,39);
     const response = await axios.get(
         `http://www.j-archive.com/showseason.php?season=${season}`,
         { responseType: 'text' },
