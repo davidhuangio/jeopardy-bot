@@ -26,7 +26,15 @@ async function loadEpisode(url: string) {
 
     // Incomplete episode?
     if ($('#jeopardy_round .clue').length !== $('#jeopardy_round .clue_text').length) {
-      throw new ReferenceError('Incomplete episode!');
+        console.log(
+            'Jeopardy round clues: ',
+            $('#jeopardy_round .clue').length,
+        );
+        console.log(
+            'Jeopardy round clue texts: ',
+            $('#jeopardy_round .clue_text').length,
+        );
+        throw new ReferenceError('Incomplete episode!');
     }
 
     // Extract the episode number:
