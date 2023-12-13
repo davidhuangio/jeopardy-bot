@@ -25,7 +25,7 @@ async function loadEpisode(url: string) {
     const $ = load(response.data);
 
     // Incomplete episode?
-    if ($('#jeopardy_round .clue').length <= $('#jeopardy_round .clue_text').length) {
+    if ($('#jeopardy_round .clue').length >= $('#jeopardy_round .clue_text').length) {
         console.log(
             'Jeopardy round clues: ',
             $('#jeopardy_round .clue').length,
