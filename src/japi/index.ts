@@ -18,7 +18,7 @@ function simplifyText(text: string): string {
 // Selector to get seasons URLs from
 const episodeRegex = /Show #([0-9]+) -/;
 const clueRegex = /clue_J_([0-9]+)_([0-9]+)/;
-//const answerRegex = /ponse">(.*)<\/e/;
+///const answerRegex = /ponse">(.*)<\/e/;
 
 async function loadEpisode(url: string) {
     const response = await axios.get(url, { responseType: 'text' });
