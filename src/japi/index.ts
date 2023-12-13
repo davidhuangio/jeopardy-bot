@@ -83,11 +83,14 @@ async function loadEpisode(url: string) {
         });
 
         // Extract the answer and strip HTML tags:
-        const answerMatches =
-            answerRegex.exec(
-                $clue.find('td:first-child > div').attr('onmouseover'),
-            ) || [];
-        let [, answer] = answerMatches;
+        // const answerMatches =
+        //     answerRegex.exec(
+        //         $clue.find('td:first-child > div').attr('onmouseover'),
+        //     ) || [];
+        // let [, answer] = answerMatches;
+
+        let answer = $clue.find('.correct_response').html() as string;
+        console.log("Found answer? -", answer);
         answer = simplifyText(striptags(answer));
 
         // Extract if this question was a daily double:
